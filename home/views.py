@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Book
 
-# Create your views here.
-def home_page(request):
-    return HttpResponse("Make a booking")
+
+
+class BookList(generic.ListView):
+    model = Book
+
+
+
