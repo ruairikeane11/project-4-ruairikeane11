@@ -14,4 +14,4 @@ class Book(models.Model):
         ordering = ["booking_date"]
 
     def __str__ (self):
-        return f"{self.name } | {self.booking_date}"
+        return f"{self.name } | {self.booking_date} | {self.booking_time}"

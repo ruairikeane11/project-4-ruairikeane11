@@ -5,7 +5,9 @@ from .models import Book
 
 
 class BookList(generic.ListView):
-    model = Book
+    queryset = Book.objects.all().order_by("booking_date")
+    template_name = "home/index.html"
+    paginated_by = 4
 
 
 
