@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load static %}
+{% url 'home' as home_url %}
 
 {% block content %}
 
@@ -54,8 +56,10 @@
 </div>
 
 <!-- index.html content ends here -->
+
 {% endblock %}
 
 {% block copyright %}
+<script src="{% static 'js/script.js' %}" type="text/html"></script>
 Copyright 2023 Ruairi Keane
 {% endblock %}
