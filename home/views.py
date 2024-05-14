@@ -10,7 +10,7 @@ class BookList(generic.ListView):
     paginate_by = 6
 
 
-def booking_detail():
+def booking_detail(request, book_id):
     """
     Display a :model`home.Book`.
 
@@ -24,14 +24,14 @@ def booking_detail():
     :template:`home/booking_detail.html`
     """
 
-    queryset = Book.objects.all()
-    book = get_object_or_404(queryset, name=name)
+    book = get_object_or_404(Book, id=book_id)
 
     return render(
         request,
         "home/booking_detail.html",
-        {"name": book},
+        {"book": book},
     )
+
 
 
 
