@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-4 text-center">
-            <img src="{% static 'images/nobody.jpg' %}" width="75%" />
-        </div>
-        <div class="col-8">
-            <!-- Title goes between these h2 tags -->
-            <h2>{{ contact.title }}</h2>
-            <!-- Content goes directly underneath this -->
-            {{ contact.content }}
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+            <h1>{{ contact.title }}</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col text-right">
-            <!-- Updated on field goes in here -->
 
-            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 card mb-4 mt-3">
+            <div class="card-body">
+                <p>Name: {{ contact.name }}</p>
+                <p class="card-text">Email: {{ contact.email }}</p>
+                <p>Content: {{ contact.content }}</p>
+                <p>Created on: {{ contact.created_on }}</p>
+            </div>
         </div>
     </div>
 </div>
+
 {% endblock content %}

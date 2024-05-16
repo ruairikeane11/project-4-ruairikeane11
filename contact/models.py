@@ -5,9 +5,9 @@ class Contact(models.Model):
     title = models.CharField(max_length=200)
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
-    phone = models.CharField(max_length=15)
     content = models.TextField()
+    created_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.title} | {self.created_on}"
 

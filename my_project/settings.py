@@ -100,6 +100,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
     "https://8000-ruairikeane-project4rua-afyvi8bkjia.ws-eu111.gitpod.io",
+    "https://8080-ruairikeane-project4rua-z9hpjfwq919.ws-eu111.gitpod.io"
 ]
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
