@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.http import HttpResponseRedirect
 from .models import Book
 from .forms import BookingForm
 
@@ -9,6 +10,7 @@ class BookList(generic.ListView):
     queryset = Book.objects.all().order_by("booking_date")
     template_name = "home/index.html"
     paginate_by = 6
+
 
 
 def booking_detail(request, book_id):
@@ -33,6 +35,8 @@ def booking_detail(request, book_id):
         {"book": book},
     )
 
+
+
 def create_booking(request):
     if request.method == "POST":
         form = BookingForm(request.POST)
@@ -42,6 +46,25 @@ def create_booking(request):
     else:
         form = BookingForm()
     return render(request, "home/create_booking.html", {'form': form})
+
+def edit_booking(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+
+    if request.method == "POST":
+        form = BookingForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = BookingForm(instance=book)
+    return render(request, 'home/edit_booking.html', {'form': form, 'book': book})
+
+    
+
+
+
+
+
             
 
 

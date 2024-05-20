@@ -3,34 +3,14 @@
 
 
 
-<div class="row justify-content-center">
-    <div class="col-12 col-md-8 card mb-4 mt-3">
-        <div class="card-body">
-            <div class="text-center mb-3">
-                <img src="{% static 'images/default.jpg' %}" alt="Default Image" class="img-fluid"
-                    style="max-width: 300px;">
-            </div>
-            <p>Name: {{ book.name }}</p>
-            <p class="card-text">Email: {{ book.email }}</p>
-            <p>Number of persons: {{ book.number_of_persons }}</p>
-            <p>Date: {{ book.booking_date }}</p>
-            <p>Time: {{ book.booking_time }}</p>
-        </div>
-    </div>
-</div>
 
-<div class="row justify-content-center">
-    <div class="col-12 col-md-8 card mb-4 mt-3">
-        <div class="card-body">
-            <h3>Edit Your Booking</h3>
-            <form method="post" action="{% url 'booking_detail' book.id %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Update Booking</button>
-            </form>
-        </div>
-    </div>
-</div>
+<p>Name: {{ book.name }}</p>
+<p class="card-text">Email: {{ book.email }}</p>
+<p>Number of persons: {{ book.number_of_persons }}</p>
+<p>Date: {{ book.booking_date }}</p>
+<p>Time: {{ book.booking_time }}</p>
+
+
 
 
 
