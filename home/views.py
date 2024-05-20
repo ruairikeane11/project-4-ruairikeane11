@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from .models import Book
+from .forms import BookingForm
 
 
 
@@ -31,6 +32,17 @@ def booking_detail(request, book_id):
         "home/booking_detail.html",
         {"book": book},
     )
+
+def create_booking(request):
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = BookingForm()
+    return render(request, "home/create_booking.html", {'form': form})
+            
 
 
 

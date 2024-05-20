@@ -1,15 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 
-<header class="py-5 bg-image-full" style="background-image: url();">
-    <div class="text-center my-5">
 
-    </div>
-</header>
 
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 card mb-4 mt-3">
         <div class="card-body">
+            <div class="text-center mb-3">
+                <img src="{% static 'images/default.jpg' %}" alt="Default Image" class="img-fluid"
+                    style="max-width: 300px;">
+            </div>
             <p>Name: {{ book.name }}</p>
             <p class="card-text">Email: {{ book.email }}</p>
             <p>Number of persons: {{ book.number_of_persons }}</p>
@@ -18,7 +18,20 @@
         </div>
     </div>
 </div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 card mb-4 mt-3">
+        <div class="card-body">
+            <h3>Edit Your Booking</h3>
+            <form method="post" action="{% url 'booking_detail' book.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Update Booking</button>
+            </form>
+        </div>
+    </div>
 </div>
+
 
 
 
