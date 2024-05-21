@@ -59,7 +59,13 @@ def edit_booking(request, book_id):
         form = BookingForm(instance=book)
     return render(request, 'home/edit_booking.html', {'form': form, 'book': book})
 
-    
+
+def delete_booking(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    book.delete()
+    return redirect('home')
+
+
 
 
 
