@@ -6,27 +6,27 @@
 
 <!-- index.html content starts here -->
 
-<div class="row justify-content-center">
-    <div class="col-md-4 mt-4 text-center">
-        <a href="{% url 'create_booking' %}" class="btn btn-success">Make a Booking</a>
-    </div>
-</div>
+<body class="bg-dark-grey">
 
-<div class="container-fluid">
-    <div class="row">
 
+    <a href="{% url 'create_booking' %}" class="btn btn-success btn-lg btn-block custom-button">Make a
+        Booking</a>
+
+
+    <div class="row justify-content-center">
         <!-- Book Column -->
-        <div class="col-md-4 mt-4 left">
-            <div class="row">
+        <div class="col-md-10 mt-4">
+            <div class="row ">
                 {% for book in book_list %}
-                <div class="col-md-12 mb-4">
-                    <div class="card ">
-                        <div class="card-body">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body ">
                             <div class="image-container">
                                 <img src="{% static 'images/default.jpg' %}" class="img-fluid mb-3 custom-img"
                                     alt="placeholder">
                                 <div class="image-flash">
-                                    <p class="author">{{ book.name }} | {{book.booking_time}} | {{ book.booking_date}}
+                                    <p class="author">{{ book.name }} | {{book.booking_time}} |
+                                        {{ book.booking_date}}
                                     </p>
                                 </div>
                             </div>
@@ -43,9 +43,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="row">
 
                 {% endfor %}
 
@@ -68,8 +65,9 @@
         </ul>
     </nav>
     {% endif %}
-</div>
+    </div>
 
+</body>
 <!-- index.html content ends here -->
 
 {% endblock %}

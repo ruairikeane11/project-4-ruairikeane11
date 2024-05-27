@@ -65,6 +65,12 @@ def delete_booking(request, book_id):
     book.delete()
     return redirect('home')
 
+def menu_page(request):
+    return render(
+        request, 
+        'home/menu.html',
+    )
+
 
 
 

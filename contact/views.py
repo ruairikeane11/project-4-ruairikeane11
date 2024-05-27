@@ -1,15 +1,24 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Contact
-
+from .forms import ContactForm
+ 
 
 def contact_us(request):
     """
-    Renders the contact page
+    Renders the contact page with ContactForm
     """
-    contact = Contact.objects.latest('created_on')
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('contact')
+    else:
+        form = ContactForm()
 
-    return render(
+    return render (
         request,
         "contact/contact.html",
-        {"contact": contact},
+        {"form":form},
     )
+        
+
