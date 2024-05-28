@@ -1,5 +1,5 @@
 body {
-    background-color: #647fb6;
+    background-color: #444
 }
 
 .brand {
@@ -22,11 +22,13 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: black
 }
 
+
 .main-bg {
-    background-color: #F9FAFC;
+    flex-grow: 1;
+    background-color: #343a40;
 }
 
 .card {
@@ -155,18 +157,32 @@ body {
 }
 
 /* custom css */
-
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.75);
+.navbar {
+    background-color: #fc9003;
 }
+
+.nav-item {
+    color: #444;
+}
+
+
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:active {
-    color: #fff;
+    color: #444
 }
 
-.footer .list-inline-item a {
-    color: rgba(255, 255, 255, 0.75);
+.footer {
+    background-color: #fc9003;
+}
+
+a {
+    color: #444;
+}
+
+
+.footer .list-inline-item {
+    color: #444;
 }
 
 .footer .list-inline-item a:hover {
@@ -174,13 +190,13 @@ body {
 }
 
 .footer .small.text-muted {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255, 0.5);
 }
 
 
 body.bg-dark-grey {
-    background-color: #343a40;
-    color: #fff;
+    background-color: #fc9003;
+
 }
 
 .card {
@@ -220,6 +236,10 @@ body.bg-dark-grey {
     border-color: #dc3545;
 }
 
+.btn-success {
+    background-color: #fc9003;
+}
+
 /* custom */
 
 .menu-page {
@@ -242,4 +262,8 @@ body.bg-dark-grey {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #dee2e6;
+}
+
+.card-img-top {
+    height: 300px;
 }

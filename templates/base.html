@@ -33,7 +33,7 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid d-flex justify-content-between">
             <div class="d-flex">
                 <a class="navbar-brand" href="{% url 'home' %}"></a>
@@ -75,15 +75,14 @@
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_login' %}">Login</a>
                     </li>
-
                     {% endif %}
-
                 </ul>
 
-
+                {% if user.is_authenticated %}
                 <span class="navbar-text text-muted">
                     Logged in as {{ user }}
                 </span>
+                {% endif %}
             </div>
         </div>
     </nav>
@@ -97,11 +96,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light">
+    <footer class="footer text-light mt-auto">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <ul class="list-inline text-center">
+                    <ul class="list-inline text-center mt-3">
                         <li class="list-inline-item">
                             <a href="#!">
                                 <span class="fa-stack fa-lg">
@@ -135,7 +134,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="small text-center text-muted fst-italic">Made By Ruairi Keane</div>
+                    <div class="small text-center text-muted fst-italic mb-2">Made By Ruairi Keane</div>
                 </div>
             </div>
         </div>

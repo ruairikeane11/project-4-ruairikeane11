@@ -3,13 +3,19 @@ from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import Book
 from .forms import BookingForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-
-
-class BookList(generic.ListView):
+class BookList(LoginRequiredMixin, generic.ListView):
+    """
     queryset = Book.objects.all().order_by("booking_date")
+    """
     template_name = "home/index.html"
     paginate_by = 6
+
+    def get_queryset(self):
+        queryset = Book.objects.all().order_by("booking_date")
+        return queryset.filter(user=self.request.user)
 
 
 
@@ -36,12 +42,14 @@ def booking_detail(request, book_id):
     )
 
 
-
+@login_required
 def create_booking(request):
     if request.method == "POST":
         form = BookingForm(request.POST)
         if form.is_valid():
-            form.save()
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
             return redirect('home')
     else:
         form = BookingForm()
