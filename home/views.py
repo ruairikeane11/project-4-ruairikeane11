@@ -14,11 +14,13 @@ class BookList(LoginRequiredMixin, generic.ListView):
     paginate_by = 6
 
     def get_queryset(self):
-        queryset = Book.objects.all().order_by("booking_date")
-        return queryset.filter(user=self.request.user)
+        if self.request.user.is_authenticated:
+            return Book.objects.filter(user=self.request.user).order_by("booking_date")
+        else:
+            return Book.objects.none()
 
 
-
+@login_required
 def booking_detail(request, book_id):
     """
     Display a :model`home.Book`.
@@ -33,8 +35,7 @@ def booking_detail(request, book_id):
     :template:`home/booking_detail.html`
     """
 
-    book = get_object_or_404(Book, id=book_id)
-
+    book = get_object_or_404(Book, id=book_id, user=request.user)
     return render(
         request,
         "home/booking_detail.html",
@@ -55,8 +56,10 @@ def create_booking(request):
         form = BookingForm()
     return render(request, "home/create_booking.html", {'form': form})
 
+
+@login_required
 def edit_booking(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
+    book = get_object_or_404(Book, id=book_id, user=request.user)
 
     if request.method == "POST":
         form = BookingForm(request.POST, instance=book)
@@ -68,8 +71,10 @@ def edit_booking(request, book_id):
     return render(request, 'home/edit_booking.html', {'form': form, 'book': book})
 
 
+
+@login_required
 def delete_booking(request, book_id):
-    book = get_object_or_404(Book, id=book_id)
+    book = get_object_or_404(Book, id=book_id, user=request.user)
     book.delete()
     return redirect('home')
 
@@ -78,18 +83,4 @@ def menu_page(request):
         request, 
         'home/menu.html',
     )
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
 

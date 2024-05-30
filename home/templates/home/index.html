@@ -31,6 +31,7 @@
 
 <div class="row justify-content-center">
     <!-- Book Column -->
+    {% if user.is_authenticated %}
     <div class="col-md-10 mt-4">
         <div class="row ">
             {% for book in book_list %}
@@ -79,7 +80,13 @@
     </ul>
 </nav>
 {% endif %}
+{% else %}
+<div class="col-md-10 mt-4">
+    <div class="alert alert-warning" role="alert">
+        You need to be logged is to view this content!
+    </div>
 </div>
+{%endif%}
 
 <!-- index.html content ends here -->
 
