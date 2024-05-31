@@ -120,7 +120,7 @@ body {
 }
 
 .link {
-    color: #23BBBB;
+    color: orange;
     text-decoration: none;
 }
 
@@ -213,11 +213,11 @@ body.bg-dark-grey {
 }
 
 .post-link {
-    color: #17a2b8;
+    color: white;
 }
 
 .post-link:hover {
-    color: white;
+    color: blue;
     text-decoration: none;
 }
 
@@ -271,8 +271,6 @@ body.bg-dark-grey {
 
 /* Login page */
 
-
-
 .btn-signup {
     background-color: orange;
 
@@ -287,7 +285,6 @@ div p {
 }
 
 #login-container {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,4 +293,42 @@ div p {
 .bg-custom-dark {
     background-color: #444;
     color: #fff;
+}
+
+/* Logout page */
+
+#logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact page */
+
+#contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Menu section */
+
+.bg-custom-dark {}
+
+.menu-section h2 {
+    background-color: #fc9003;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Index page */
+
+.container {
+    margin-bottom: 10px;
+}
+
+.card-tall {
+    margin-bottom: 200px;
 }
