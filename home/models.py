@@ -8,7 +8,7 @@ class Book(models.Model):
     email = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
     number_of_persons = models.PositiveIntegerField(default=1)
-    booking_date = models.DateField()
+    booking_date = models.DateTimeField()
     booking_time = models.TimeField()
 
     class Meta:
