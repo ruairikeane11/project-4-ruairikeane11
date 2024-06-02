@@ -11,7 +11,7 @@ class BookList(LoginRequiredMixin, generic.ListView):
     queryset = Book.objects.all().order_by("booking_date")
     """
     template_name = "home/index.html"
-    paginate_by = 6
+    paginate_by = 3
 
     def get_queryset(self):
         if self.request.user.is_authenticated:

@@ -314,7 +314,6 @@ div p {
 
 /* Menu section */
 
-.bg-custom-dark {}
 
 .menu-section h2 {
     background-color: #fc9003;
@@ -331,4 +330,13 @@ div p {
 
 .card-tall {
     margin-bottom: 200px;
+}
+
+/* index page*/
+
+.bg-image-full {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
 }
