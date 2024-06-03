@@ -32,7 +32,7 @@ body {
 }
 
 .card {
-    border: none;
+    border: #fc9003;
     background-color: transparent;
 }
 
@@ -200,8 +200,8 @@ body.bg-dark-grey {
 
 }
 
-.card {
-    background-color: #444;
+.card-about {
+    background-color: #fc9003
 }
 
 .card .card-body {
@@ -333,10 +333,3 @@ div p {
 }
 
 /* index page*/
-
-.bg-image-full {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%);
-}
