@@ -4,6 +4,22 @@
 
 {% block content %}
 
+<div class="container mt-5">
+    <div class="row justify-content-between">
+        <div class="card bg-dark text-light">
+            <div class="card-body">
+                <div class="card-title text-center">
+                    <h1>Welcome to the bookings page</h1>
+                </div>
+                <p class="mt-4 text-center">Click the button below to book</p>
+                <div class="text-center">
+                    <a href="{% url 'create_booking' %}" class="btn btn-primary mt-3">Create Booking</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container d-flex flex-column justify-content-between">
     <div class="row justify-content-center">
         <!-- Book Column -->
@@ -54,8 +70,6 @@
     </div>
 </div>
 {%endif%}
-
-<!-- index.html content ends here -->
 
 {% endblock %}
 

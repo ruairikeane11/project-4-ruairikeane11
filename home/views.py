@@ -78,9 +78,9 @@ def delete_booking(request, book_id):
     return redirect('home')
 
 @login_required
-def bookings_page(request):
+def bookings(request):
     bookings = Book.objects.filter(user=request.user)
-    return render (request, 'home/bookings_page.html', {'book':bookings })
+    return render (request, 'home/bookings.html', {'book_list':bookings })
 
 
 def menu_page(request):
