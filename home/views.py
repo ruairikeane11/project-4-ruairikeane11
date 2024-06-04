@@ -71,12 +71,17 @@ def edit_booking(request, book_id):
     return render(request, 'home/edit_booking.html', {'form': form, 'book': book})
 
 
-
 @login_required
 def delete_booking(request, book_id):
     book = get_object_or_404(Book, id=book_id, user=request.user)
     book.delete()
     return redirect('home')
+
+@login_required
+def bookings_page(request):
+    bookings = Book.objects.filter(user=request.user)
+    return render (request, 'home/bookings_page.html', {'book':bookings })
+
 
 def menu_page(request):
     return render(
