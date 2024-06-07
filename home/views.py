@@ -6,7 +6,7 @@ from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-class BookList(LoginRequiredMixin, generic.ListView):
+class BookList(generic.ListView):
     """
     queryset = Book.objects.all().order_by("booking_date")
     """
@@ -79,6 +79,7 @@ def delete_booking(request, book_id):
 
 @login_required
 def bookings(request):
+    paginate_by = 3
     bookings = Book.objects.filter(user=request.user)
     return render (request, 'home/bookings.html', {'book_list':bookings })
 

@@ -7,11 +7,11 @@
 <!-- index.html content starts here -->
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
-        <div class="col-lg-7">
-            <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'images/default.jpg' %}" alt="..." />
+        <div class="col-lg-7" style="width: 70%;">
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'images/heroimage.jpg' %}" alt="..." />
         </div>
-        <div class="col-lg-5">
-            <h1 class="text-white">Boss Burgers</h1>
+        <div class="col-lg-5" style="width: 30%;">
+            <h1 class="text-white">Goat Burger</h1>
             <p>The finest quality, with quality prices!</p>
             <a class="btn btn-primary" href="{% url 'menu' %}">View Menu</a>
             <a class="btn btn-primary" href="{% url 'create_booking' %}">Create Booking</a>
@@ -20,12 +20,20 @@
 </div>
 
 <!-- About Section-->
-<div class="container my-5 about-bg">
+<div class="container about-bg mt-1">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card-about text-white bg-yellow py-4 text-center">
+            <div class="card-about text-white bg-yellow my-5 py-4 text-center rounded">
                 <div class="card-body">
-                    <p class="text-white m-0">About Section</p>
+                    <h1 class="text-white mb-4">About Section</h1>
+                    <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including
+                        versions of Lorem Ipsum.</p>
 
                 </div>
             </div>
@@ -33,6 +41,43 @@
     </div>
 </div>
 
+<div class="container-fluid">
+    <div class="row gx-4 gx-lg-5">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100 border">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Card One</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex
+                        numquam,
+                        maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                </div>
+                <div class="card-footer text-center"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100 border">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Card One</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex
+                        numquam,
+                        maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                </div>
+                <div class="card-footer text-center"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100 border">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Card One</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex
+                        numquam,
+                        maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                </div>
+                <div class="card-footer text-center"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- index.html content ends here -->
 
 {% endblock %}
