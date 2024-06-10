@@ -17,9 +17,9 @@
         <div class="card bg-black text-light">
             <div class="card-body">
                 <div class="card-title text-center">
-                    <h1>Welcome to the bookings page</h1>
+                    <h1>Welcome to your booking page</h1>
                 </div>
-                <p class="mt-4 text-center">Click the button below to book</p>
+                <p class="mt-4 text-center">Click the button below to make a reservation</p>
                 <div class="text-center">
                     <a href="{% url 'create_booking' %}" class="btn btn-primary mt-3">Create Booking</a>
                 </div>
@@ -39,12 +39,14 @@
                     <div class="card small-card" style="background-color: black; border: 2px solid #fc9003;">
                         <div class="card-body text-white">
                             <div class="card-body">
-                                <p class="author">{{book.booking_time}} | {{ book.booking_date }}</p>
-                                <a href="{% url 'booking_detail' book.id %}" class="post-link">
-                                    <h2 class="card-title">View Booking</h2>
+                                <p class="author">|{{ book.booking_date }}|</p>
+                                <p class="author">|{{ book.booking_time }}|</p>
+
                                 </a>
-                                <a href="{% url 'edit_booking' book.id %}" class="btn btn-primary">Edit Booking</a>
-                                <a href="{% url 'delete_booking' book.id %}" class="btn btn-danger">Delete Booking</a>
+                                <a href="{% url 'edit_booking' book.id %}" class="btn btn-primary">Edit
+                                    Booking</a>
+                                <a href="{% url 'delete_booking' book.id %}" class="btn btn-danger mt-2">Delete
+                                    Booking</a>
                             </div>
                         </div>
                     </div>

@@ -37,3 +37,6 @@ def contact_delete(request, contact_id):
     contact.delete()
     messages.success(request, "Contact form successfully deleted")
     return redirect('contact')
+
+
+
