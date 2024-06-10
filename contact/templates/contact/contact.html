@@ -2,6 +2,15 @@
 {% block content %}
 {% load static %}
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: 'Chivo Mono', sans-serif;
+    }
+</style>
+
+
 <div class="container" id="contact-container">
     <div class="card bg-custom-dark text-light mt-4 p-4">
         <h1>Contact Us</h1>
@@ -13,4 +22,12 @@
     </div>
 </div>
 
-{% endblock content %}
+<hr>
+
+{% if submitted_content %}
+<div class="container submitted-content">
+    {{submitted_content}}
+
+</div>
+{% endif %}
+{% endblock %}

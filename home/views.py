@@ -51,7 +51,7 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
-            return redirect('home')
+            return redirect('bookings')
     else:
         form = BookingForm()
     return render(request, "home/create_booking.html", {'form': form})
@@ -75,7 +75,7 @@ def edit_booking(request, book_id):
 def delete_booking(request, book_id):
     book = get_object_or_404(Book, id=book_id, user=request.user)
     book.delete()
-    return redirect('home')
+    return redirect('bookings')
 
 @login_required
 def bookings(request):

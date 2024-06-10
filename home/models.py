@@ -9,7 +9,7 @@ class Book(models.Model):
     phone = models.CharField(max_length=15)
     number_of_persons = models.PositiveIntegerField(default=1)
     booking_date = models.DateTimeField()
-    booking_time = models.TimeField()
+    booking_time = models.TimeField(auto_now=False)
 
     class Meta:
         ordering = ["booking_date"]

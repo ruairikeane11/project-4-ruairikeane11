@@ -5,6 +5,15 @@
 {% block content %}
 
 <!-- index.html content starts here -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: 'Chivo Mono', sans-serif;
+    }
+</style>
+
+
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
         <div class="col-lg-7" style="width: 70%;">
@@ -14,26 +23,25 @@
             <h1 class="text-white">Goat Burger</h1>
             <p>The finest quality, with quality prices!</p>
             <a class="btn btn-primary" href="{% url 'menu' %}">View Menu</a>
-            <a class="btn btn-primary" href="{% url 'create_booking' %}">Create Booking</a>
+            <a class="btn btn-primary" href="{% url 'create_booking' %}">Book Now</a>
         </div>
     </div>
 </div>
 
 <!-- About Section-->
-<div class="container about-bg mt-1">
+<div class="container about-bg">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card-about text-white bg-yellow my-5 py-4 text-center rounded">
                 <div class="card-body">
-                    <h1 class="text-white mb-4">About Section</h1>
-                    <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum.</p>
+                    <h1 class="text-white ">About Section</h1>
+                    <p class="mt-4">Welcome to Goat Burger, where passion meets flavour in every bite.
+                        Nested in the heart of Dublin's city centre, our restaraunt is a haven for burger enthusiasts
+                        seeking for all out excellence. We take pride in providing an experience for our customers, and
+                        that's why we only source the finest quality ingredients, from locally sourced grass fed beef,
+                        to
+                        artisanal cheeses and freshly baked brioche buns.
+                    </p>
 
                 </div>
             </div>

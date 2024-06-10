@@ -7,18 +7,23 @@ def contact_us(request):
     """
     Renders the contact page with ContactForm
     """
+
+    submitted_content = None
+
+
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('contact')
+            contact = form.save()
+            submitted_content = contact.content
+            form = ContactForm()
     else:
         form = ContactForm()
 
     return render (
         request,
         "contact/contact.html",
-        {"form":form},
+        {"form":form, 'submitted_content': submitted_content},
     )
         
 
