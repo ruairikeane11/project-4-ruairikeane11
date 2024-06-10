@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+{% url 'contact' as contact_url %}
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
@@ -14,6 +15,7 @@
 <div class="container" id="contact-container">
     <div class="card bg-custom-dark text-light mt-4 p-4">
         <h1>Contact Us</h1>
+        <p>Please fill out the form below to get in touch. </p>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
@@ -24,10 +26,29 @@
 
 <hr>
 
-{% if submitted_content %}
-<div class="container submitted-content">
-    {{submitted_content}}
+<h2 class="text-center mt-5 text-white">My Previous Requests</h2>
 
+{% if submitted_contacts %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+        <div class="row">
+            {% for contact in submitted_contacts %}
+            <div class="col-sm-6 col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ contact.title }}</h5>
+                        <p><strong>Name:</strong> {{contact.name}}</p>
+                        <p><strong>Email:</strong> {{contact.email}}</p>
+                        <p><strong>Subject:</strong> {{contact.content}}</p>
+                        <p><strong>Created on:</strong> {{contact.created_on}}</p>
+                        <a href="{% url 'contact_delete' contact.id %}" class="btn btn-danger">Delete Request</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endif %}
+</div>
 {% endblock %}
