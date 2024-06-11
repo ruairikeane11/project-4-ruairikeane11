@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.http import HttpResponseRedirect
-from .models import Book
+from .models import Books
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -16,9 +16,9 @@ class BookList(generic.ListView):
 
     def get_queryset(self):
         if self.request.user.is_authenticated:
-            return Book.objects.filter(user=self.request.user).order_by("booking_date")
+            return Books.objects.filter(user=self.request.user).order_by("booking_date")
         else:
-            return Book.objects.none()
+            return Books.objects.none()
 
 
 @login_required
@@ -36,7 +36,7 @@ def booking_detail(request, book_id):
     :template:`home/booking_detail.html`
     """
 
-    book = get_object_or_404(Book, id=book_id, user=request.user)
+    book = get_object_or_404(Books, id=book_id, user=request.user)
     return render(
         request,
         "home/booking_detail.html",
@@ -82,7 +82,7 @@ def delete_booking(request, book_id):
 
 @login_required
 def bookings(request):
-    bookings = Book.objects.filter(user=request.user)
+    bookings = Books.objects.filter(user=request.user)
     return render(request, 'home/bookings.html', {'book_list': bookings})
 
 

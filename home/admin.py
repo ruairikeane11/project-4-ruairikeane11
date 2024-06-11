@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Book
+from .models import Books
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
-@admin.register(Book)
+@admin.register(Books)
 class BookAdmin(SummernoteModelAdmin):
 
     list_display = ('name', 'phone', 'booking_date', 'booking_time')
