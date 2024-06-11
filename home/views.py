@@ -6,6 +6,7 @@ from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 class BookList(generic.ListView):
     """
     queryset = Book.objects.all().order_by("booking_date")
@@ -68,7 +69,8 @@ def edit_booking(request, book_id):
             return redirect('home')
     else:
         form = BookingForm(instance=book)
-    return render(request, 'home/edit_booking.html', {'form': form, 'book': book})
+    return render(request, 'home/edit_booking.html',
+                  {'form': form, 'book': book})
 
 
 @login_required
@@ -77,15 +79,15 @@ def delete_booking(request, book_id):
     book.delete()
     return redirect('bookings')
 
+
 @login_required
 def bookings(request):
     bookings = Book.objects.filter(user=request.user)
-    return render (request, 'home/bookings.html', {'book_list':bookings })
+    return render(request, 'home/bookings.html', {'book_list': bookings})
 
 
 def menu_page(request):
     return render(
-        request, 
+        request,
         'home/menu.html',
     )
-

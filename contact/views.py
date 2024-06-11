@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Contact
 from .forms import ContactForm
 from django.contrib import messages
- 
+
 
 def contact_us(request):
     """
@@ -19,14 +19,12 @@ def contact_us(request):
 
     submitted_contacts = Contact.objects.all().order_by('-created_on')
 
-    return render (
+    return render(
         request,
         "contact/contact.html",
-        {"form":form,
-        'submitted_contacts': submitted_contacts},
+        {"form": form,
+         'submitted_contacts': submitted_contacts},
     )
-        
-
 
 
 def contact_delete(request, contact_id):
@@ -37,6 +35,3 @@ def contact_delete(request, contact_id):
     contact.delete()
     messages.success(request, "Contact form successfully deleted")
     return redirect('contact')
-
-
-

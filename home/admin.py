@@ -9,5 +9,3 @@ class BookAdmin(SummernoteModelAdmin):
     list_display = ('name', 'phone', 'booking_date', 'booking_time')
     search_fields = [ 'name', 'phone' ]
     list_filter = ('booking_date',)
-
-    
