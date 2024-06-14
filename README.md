@@ -60,3 +60,25 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 - When being viewed on a smaller screen, a toggler icon will appear on the left hand side, once clicked, the links to all of the other pages will appear vertically stacked.
 
 ![alt text](image-9.png)
+
+### About Section
+
+- On the homepage, beneath the hero image, there lies an 'About' section. This welcomes the viewer to the website and gives a little bit of information about the location of the resteraunt and what the business truely values, which is taking pride in its products and service.
+
+- Beneath, there lies 3 bootstrap styled cards alligned horizontally. These 3 cards also give the viewer more specific information about the prices, ingredients and the upcoming location. Each card has a button which will either redirect you to the menu page, or to the contact page, where a logged in user can fill out a form to make a request to the business.
+
+![alt text](image-10.png)
+
+### Booking Page
+
+- The booking page is simply designed. It has text at the top of the page welcoming the user to the page and beneath there is a button that brings you to fill out the booking form once clicked. At the bottom, above the footer, lies a record of all bookings made by the logged in user.
+
+![alt text](image-12.png)
+
+- Once the button is clicked, the user can then fill out a form with several fields to confirm the time, date and number of people who will make use of the booking at the restaraunt. 
+
+![alt text](image-13.png)
+
+- You can see here that once the form is filled out the user is redirected to the booking page with the recorded booking at the bottom.
+
+![alt text](image-14.png)
