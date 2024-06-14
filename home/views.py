@@ -60,7 +60,7 @@ def create_booking(request):
 
 @login_required
 def edit_booking(request, book_id):
-    book = get_object_or_404(Book, id=book_id, user=request.user)
+    book = get_object_or_404(Books, id=book_id, user=request.user)
 
     if request.method == "POST":
         form = BookingForm(request.POST, instance=book)
