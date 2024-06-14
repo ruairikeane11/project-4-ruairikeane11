@@ -6,3 +6,6 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ['title', 'name', 'email', 'content']
+        widgets = {
+            'content' : forms.Textarea(attrs={'rows': 4, 'style': 'resize:none; width:100%' }),
+        }
