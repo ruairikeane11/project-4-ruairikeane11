@@ -16,11 +16,15 @@
     <div class="card bg-custom-dark text-light mt-4 p-4">
         <h1>Contact Us Here</h1>
         <p>Fill out the form below to get in touch. </p>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="row">
+            <div class="col-12">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -28,26 +32,5 @@
 
 <h2 class="text-center mt-5 text-white">My Previous Requests</h2>
 
-{% if submitted_contacts %}
-<div class="row justify-content-center mt-5">
-    <div class="col-md-10">
-        <div class="row">
-            {% for contact in submitted_contacts %}
-            <div class="col-sm-6 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body" style="border: 2px solid #fc9003;">
-                        <h5 class="card-title"><strong></strong>{{ contact.title }}</h5>
-                        <p><strong></strong> {{contact.name}}</p>
-                        <p><strong></strong> {{contact.email}}</p>
-                        <p><strong>Subject:</strong> {{contact.content}}</p>
-                        <p><strong>Created on:</strong> {{contact.created_on}}</p>
-                        <a href="{% url 'contact_delete' contact.id %}" class="btn btn-danger">Delete Request</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
 {% endif %}
 {% endblock %}
