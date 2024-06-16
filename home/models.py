@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Books(models.Model):
     """
@@ -11,10 +12,10 @@ class Books(models.Model):
     email = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
     number_of_persons_choices = [
-        ('1','1'),
+        ('1', '1'),
         ('2', '2'),
-        ('3','3'),
-        ('4+','4+'),
+        ('3', '3'),
+        ('4+', '4+'),
     ]
     number_of_persons = models.CharField(max_length=2, choices=number_of_persons_choices)
     booking_date = models.DateField()
