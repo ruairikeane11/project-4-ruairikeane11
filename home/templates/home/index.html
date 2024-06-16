@@ -6,16 +6,17 @@
 
 <!-- index.html content starts here -->
 
-
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 align-items-center my-5 flex-column flex-lg-row">
         <div class="col-lg-7" style="width: 70%;">
+            <!-- Hero image here -->
             <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'images/heroimage.jpg' %}" alt="..." />
         </div>
         <div class="col-lg-5 text-center text-lg-start" style="width: 30%;">
             <h1 class="text-white">GOAT BURGER</h1>
             <p class="w-100">The finest quality, with quality prices!</p>
             <div class="d-flex justify-content-center justify-content-lg-start">
+                <!-- Buttons below -->
                 <a class="btn btn-primary me-2" href="{% url 'menu' %}">View Menu</a>
                 <a class="btn btn-primary" href="{% url 'create_booking' %}">Book Now</a>
             </div>
@@ -44,6 +45,7 @@
     </div>
 </div>
 
+<!-- Additional cards with general info with links to pages -->
 <div class="container-fluid">
     <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-5">
