@@ -5,6 +5,7 @@ from .models import Books
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 
 class BookList(generic.ListView):
@@ -56,6 +57,7 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
+            messages.success(request, "Booking created successfully!")
             return redirect('bookings')
     else:
         form = BookingForm()
@@ -78,6 +80,7 @@ def edit_booking(request, book_id):
         form = BookingForm(request.POST, instance=book)
         if form.is_valid():
             form.save()
+            messages.success(request, "Booking updated successfully!")
             return redirect('bookings')
     else:
         form = BookingForm(instance=book)
@@ -97,6 +100,7 @@ def delete_booking(request, book_id):
     """
     book = get_object_or_404(Books, id=book_id, user=request.user)
     book.delete()
+    messages.success(request, "Booking deleted successfully!")
     return redirect('bookings')
 
 

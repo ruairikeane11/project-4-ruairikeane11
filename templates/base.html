@@ -94,6 +94,20 @@
         </div>
     </nav>
 
+    <div class="message-container">
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+
+
     <main class="flex-shrink-0 main-bg">
 
         {% block content %}

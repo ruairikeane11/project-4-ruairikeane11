@@ -332,3 +332,8 @@ div p {
 .bg-black {
     background-color: #222222;
 }
+
+/* Alert messages */
+.alert {
+    background-color: #222222;
+}
