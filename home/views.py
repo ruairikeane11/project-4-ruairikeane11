@@ -78,7 +78,7 @@ def edit_booking(request, book_id):
         form = BookingForm(request.POST, instance=book)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('bookings')
     else:
         form = BookingForm(instance=book)
     return render(request, 'home/edit_booking.html',
