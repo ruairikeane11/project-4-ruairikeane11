@@ -334,6 +334,6 @@ div p {
 }
 
 /* Alert messages */
-.alert {
+.messages-container {
     background-color: #222222;
 }

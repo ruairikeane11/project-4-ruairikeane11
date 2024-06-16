@@ -57,7 +57,7 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
-            messages.success(request, "Booking created successfully!")
+            messages.success(request, "Booking created successfully!", extra_tags='success')
             return redirect('bookings')
     else:
         form = BookingForm()
@@ -80,7 +80,7 @@ def edit_booking(request, book_id):
         form = BookingForm(request.POST, instance=book)
         if form.is_valid():
             form.save()
-            messages.success(request, "Booking updated successfully!")
+            messages.success(request, "Booking updated successfully!", extra_tags='info')
             return redirect('bookings')
     else:
         form = BookingForm(instance=book)
@@ -100,7 +100,7 @@ def delete_booking(request, book_id):
     """
     book = get_object_or_404(Books, id=book_id, user=request.user)
     book.delete()
-    messages.success(request, "Booking deleted successfully!")
+    messages.success(request, "Booking deleted successfully!", extra_tags='danger')
     return redirect('bookings')
 
 

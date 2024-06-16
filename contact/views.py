@@ -12,7 +12,7 @@ def contact_us(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             contact = form.save()
-            messages.success(request, "Your message has been submitted.")
+            messages.success(request, "Your request has been submitted, a member of our team will get back to you as soon as possible!", extra_tags='info')
     else:
         form = ContactForm()
 
