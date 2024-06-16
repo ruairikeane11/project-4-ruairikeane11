@@ -3,6 +3,9 @@ from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
+    """
+    Form class for users to make a contact request
+    """
     class Meta:
         model = Contact
         fields = ['title', 'name', 'email', 'content']

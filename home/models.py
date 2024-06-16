@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Books(models.Model):
+    """
+    Stores a single booking request related to :model:`auth.User`.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
