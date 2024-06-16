@@ -9,7 +9,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class BookList(generic.ListView):
     """
-    queryset = Book.objects.all().order_by("booking_date")
+    Displays recorded instances of Books model
+
     """
     template_name = "home/index.html"
     paginate_by = 3
@@ -46,6 +47,9 @@ def booking_detail(request, book_id):
 
 @login_required
 def create_booking(request):
+    """
+    Add a record of Books to database
+    """
     if request.method == "POST":
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -60,6 +64,14 @@ def create_booking(request):
 
 @login_required
 def edit_booking(request, book_id):
+    """
+    Allows user to edit a record of Books and update in database.
+
+    **Context**
+
+    ``book``
+        An instance of :model:`home.Books`.
+    """
     book = get_object_or_404(Books, id=book_id, user=request.user)
 
     if request.method == "POST":
@@ -75,6 +87,14 @@ def edit_booking(request, book_id):
 
 @login_required
 def delete_booking(request, book_id):
+    """
+    Allows user to delete a record of Books from database.
+
+    **Context**
+
+    ``book``
+        An instance of :model:`home.Books`.
+    """
     book = get_object_or_404(Books, id=book_id, user=request.user)
     book.delete()
     return redirect('bookings')
@@ -82,11 +102,26 @@ def delete_booking(request, book_id):
 
 @login_required
 def bookings(request):
+    """
+    Renders all records of Books.
+
+    **Context**
+
+    ``bookings``
+        All records of model:`home.Books`.
+
+    **Template:**
+
+    :template:`blog/bookings.html`
+    """
     bookings = Books.objects.filter(user=request.user)
     return render(request, 'home/bookings.html', {'book_list': bookings})
 
 
 def menu_page(request):
+    """
+    Renders menu.html and all its content
+    """
     return render(
         request,
         'home/menu.html',
