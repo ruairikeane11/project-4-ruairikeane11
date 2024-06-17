@@ -186,6 +186,11 @@ a.navbar-brand {
     background-color: #F08000;
 }
 
+
+div.small.text-center.text-black.fst-italic.mb-2 {
+    color: black;
+}
+
 a {
     color: black;
 }
@@ -261,8 +266,7 @@ body.bg-dark-grey {
 }
 
 .menu-section h2 {
-    background-color: #343a40;
-    color: white;
+    color: black;
     padding: 10px;
     border-radius: 5px;
 }
@@ -327,7 +331,7 @@ div p {
 
 .menu-section h2 {
     background-color: #F08000;
-    color: white;
+    color: black;
     padding: 10px;
     border-radius: 5px;
 }
