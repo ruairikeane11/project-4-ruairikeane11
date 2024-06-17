@@ -128,7 +128,7 @@ body {
 }
 
 .btn-delete {
-    color: #fff;
+    color: black;
     background: #E84610;
 }
 
@@ -238,8 +238,8 @@ body.bg-dark-grey {
 }
 
 .btn-primary {
-    background-color: #F08000;
-    border-color: #F08000;
+    background-color: #fc9003;
+    border-color: #fc9003;
     color: black;
 }
 
