@@ -2,6 +2,8 @@
 
 Goat Burger is a website designed for a gourmet burger restaraunt in the heart of Dublin's city centre. It's simple design makes the website very easy for the user navigate through. Any user of the website is able to view the menu page. A user is able to interact with all of the other features the site has to offer once they have signed up and made an account. Users can create, edit and delete all existing bookings made with their logged in account. The logged in user can also fill out a form to get in touch regarding any other general queries.
 
+![alt text](image.png)  
+
 ## Table Of Contents 
 1. User Experience
 2. Features
@@ -27,7 +29,7 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 ### Colors 
 - The website uses 3 main colours. The navbar and footer are both styled in orange to contrast with darkness of the body content of each page. The buttons to either create or edit are typically the same colour as the nav and footer, while the buttons to delete a booking/inquiery are red. The booking form and the conatct form also contain a background colour of #222222, this is a dark grey and therefore sticks to the design principle of having a small colour pallete of black/grey, orange and red.
 
-![alt text](image-4.png)
+![alt text](image-color.png)
 
 ### Font 
 - I decided to use the 'Chivo Mono' font from [GoogleFonts](https://fonts.google.com/) throughout all pages of the website, because it is plain while also being captivating for the viewer. I think this font is especially suiting for a simply designed website, with a dark coloured body. It is also sans-serif, which makes the font easy to follow for all viewers.
