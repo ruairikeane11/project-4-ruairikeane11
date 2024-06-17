@@ -35,7 +35,7 @@ body {
 }
 
 .card {
-    border: #fc9003;
+    border: #F08000;
     background-color: transparent;
 }
 
@@ -111,13 +111,13 @@ body {
 
 
 .link {
-    color: #fc9003;
+    color: #F08000;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: black;
     text-decoration: underline;
 }
 
@@ -149,7 +149,7 @@ body {
 
 /* custom css */
 .navbar {
-    background-color: #fc9003;
+    background-color: #F08000;
 }
 
 .navbar-nav .nav-link {
@@ -161,6 +161,19 @@ body {
     text-decoration: underline;
 }
 
+.navbar-dark .navbar-brand {
+    color: black;
+}
+
+.navbar-dark .navbar-toggler {
+    color: black;
+}
+
+
+a.navbar-brand {
+    color: black;
+}
+
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:active,
@@ -170,34 +183,31 @@ body {
 }
 
 .footer {
-    background-color: #fc9003;
+    background-color: #F08000;
 }
 
 a {
-    color: #444;
+    color: black;
 }
 
 
 .footer .list-inline-item {
-    color: #444;
-}
-
-.footer .list-inline-item a:hover {
-    color: #fff;
+    color: black;
 }
 
 .footer .small.text-muted {
-    color: rgb(255, 255, 255, 0.5);
+    color: black;
 }
 
 
 body.bg-dark-grey {
-    background-color: #fc9003;
+    background-color: #F08000;
 
 }
 
 .card-about {
-    background-color: #fc9003
+    background-color: #F08000;
+
 }
 
 .card .card-body {
@@ -223,18 +233,21 @@ body.bg-dark-grey {
 }
 
 .btn-primary {
-    background-color: #fc9003;
-    border-color: #fc9003;
+    background-color: #F08000;
+    border-color: #F08000;
+    color: black;
 }
 
 
 .btn-danger {
     background-color: #E84610;
     border-color: #e84610;
+    color: black;
 }
 
 .btn-success {
-    background-color: #fc9003;
+    background-color: #F08000;
+    color: black;
 }
 
 /* custom */
@@ -268,7 +281,8 @@ body.bg-dark-grey {
 /* Login page */
 
 .btn-signup {
-    background-color: #fc9003;
+    background-color: #F08000;
+    color: black;
 
 }
 
@@ -312,7 +326,7 @@ div p {
 /* Menu section */
 
 .menu-section h2 {
-    background-color: #fc9003;
+    background-color: #F08000;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -329,10 +343,5 @@ div p {
 }
 
 .bg-black {
-    background-color: #222222;
-}
-
-/* Alert messages */
-.messages-container {
     background-color: #222222;
 }
