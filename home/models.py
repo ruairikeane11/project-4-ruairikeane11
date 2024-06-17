@@ -17,7 +17,8 @@ class Books(models.Model):
         ('3', '3'),
         ('4+', '4+'),
     ]
-    number_of_persons = models.CharField(max_length=2, choices=number_of_persons_choices)
+    number_of_persons = models.CharField(max_length=2,
+                                         choices=number_of_persons_choices)
     booking_date = models.DateField()
     booking_time_choices = [
         ('14:00', '14:00'),
@@ -43,6 +44,3 @@ class Books(models.Model):
 
     class Meta:
         ordering = ["booking_date"]
-
-    def __str__(self):
-        return f"{self.name}|{self.email}"

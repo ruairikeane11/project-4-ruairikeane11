@@ -28,7 +28,6 @@ body {
     background-color: black;
 }
 
-
 .main-bg {
     flex-grow: 1;
     background-color: black;
@@ -42,7 +41,6 @@ body {
 .image-container {
     position: relative;
 }
-
 
 .scale {
     width: 100%;
@@ -111,13 +109,13 @@ body {
 
 
 .link {
-    color: #F08000;
+    color: white;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 
@@ -186,7 +184,6 @@ a.navbar-brand {
     background-color: #F08000;
 }
 
-
 div.small.text-center.text-black.fst-italic.mb-2 {
     color: black;
 }
@@ -195,7 +192,6 @@ a {
     color: black;
 }
 
-
 .footer .list-inline-item {
     color: black;
 }
@@ -203,7 +199,6 @@ a {
 .footer .small.text-muted {
     color: black;
 }
-
 
 body.bg-dark-grey {
     background-color: #F08000;
@@ -243,7 +238,6 @@ body.bg-dark-grey {
     color: black;
 }
 
-
 .btn-danger {
     background-color: #E84610;
     border-color: #e84610;
@@ -256,7 +250,6 @@ body.bg-dark-grey {
 }
 
 /* custom */
-
 .menu-page {
     background-color: #f8f9fa;
 }
@@ -283,11 +276,9 @@ body.bg-dark-grey {
 }
 
 /* Login page */
-
 .btn-signup {
     background-color: #F08000;
     color: black;
-
 }
 
 div h3 {
@@ -310,7 +301,6 @@ div p {
 }
 
 /* Logout page */
-
 #logout-container {
     display: flex;
     justify-content: center;
@@ -318,7 +308,6 @@ div p {
 }
 
 /* Contact page */
-
 #contact-container {
     display: flex;
     justify-content: center;
@@ -326,9 +315,7 @@ div p {
     margin-bottom: 15px;
 }
 
-
 /* Menu section */
-
 .menu-section h2 {
     background-color: #F08000;
     color: black;
@@ -337,7 +324,6 @@ div p {
 }
 
 /* Index page */
-
 .container {
     margin-bottom: 10px;
 }
