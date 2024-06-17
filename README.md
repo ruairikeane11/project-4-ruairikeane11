@@ -30,7 +30,7 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 ![alt text](image-4.png)
 
 ### Font 
-- I decided to use the 'Chivo Monu' font from [GoogleFonts](https://fonts.google.com/) throughout all pages of the website, because it is plain while also being captivating for the viewer. I think this font is especially suiting for a simply designed website, with a dark coloured body. It is also sans-serif, which makes the font easy to follow for all viewers.
+- I decided to use the 'Chivo Mono' font from [GoogleFonts](https://fonts.google.com/) throughout all pages of the website, because it is plain while also being captivating for the viewer. I think this font is especially suiting for a simply designed website, with a dark coloured body. It is also sans-serif, which makes the font easy to follow for all viewers.
 
 
 
