@@ -1,7 +1,4 @@
 # Goat Burger Website
-![alt text](image.png)
-
-![alt text](image-1.png)
 
 Goat Burger is a website designed for a gourmet burger restaraunt in the heart of Dublin's city centre. It's simple design makes the website very easy for the user navigate through. Any user of the website is able to view the menu page. A user is able to interact with all of the other features the site has to offer once they have signed up and made an account. Users can create, edit and delete all existing bookings made with their logged in account. The logged in user can also fill out a form to get in touch regarding any other general queries.
 
@@ -33,39 +30,38 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 ![alt text](image-4.png)
 
 ### Font 
-- I decided to use the 'Chivo Monu' font throughout all pages of the website, because it is plain while also being captivating for the viewer. I think this font is especially suiting for a simply designed website, with a dark coloured body. It is also sans-serif, which makes the font easy to follow for all viewers.
+- I decided to use the 'Chivo Monu' font from [GoogleFonts](https://fonts.google.com/) throughout all pages of the website, because it is plain while also being captivating for the viewer. I think this font is especially suiting for a simply designed website, with a dark coloured body. It is also sans-serif, which makes the font easy to follow for all viewers.
 
-![alt text](image-2.png)
+
 
 ### Icons 
-- The icons are found in the footer, located at the bottom of every page. They are taken from Fontawesome.com, and are all utilised as classes in the i tag, therefore easily targeted and customised.
+- The icons are found in the footer, located at the bottom of every page. They are taken from [Fontawesome](https://fontawesome.com/), and are all utilised as classes in the i tag, therefore easily targeted and customised.
 
-![alt text](image-5.png)
+
 
 ### Images 
 - The website includes one hero image to captivate the viewers attention. It is found on the landing page and there are links to view the menu and make a booking are directly beside the image. This is done on purpose to encourage the user to make use of the buttons on the homepage. 
 
-![alt text](image-6.png)
+
 
 # 2. Features
 
 ### Navbar
 - The website incorpates a responsive navbar depending on the screen size in use. If not logged in, the navbar, will display a 'Register' and 'Login' page. 
-![alt text](image-7.png)
+
 
 - Once logged in, the 'Register' and 'Login' page will both dissapear and be replaced with a 'Sign Out' page, which gives the option to log out of their user account. Text will be displayed on the right hand side of the navbar, displaying 'Logged in as' with the username after. In the production, I created a user with the username of 'ruairikeane11', there 'Logged in as ruairikeane11' will appear in a muted text in the right hand side.
 
-![alt text](image-8.png)
+
 
 - When being viewed on a smaller screen, a toggler icon will appear on the left hand side, once clicked, the links to all of the other pages will appear vertically stacked.
 
-![alt text](image-9.png)
+
 
 ### Footer 
 
 - At the bottom of each page there is a footer. It is styled in the same color as the navbar the keep consistency within the site(#fc9003). Here, you can find links the social media sites like Youtube, Facebook and Twitter. 
 
-![alt text](image-17.png)
 
 ### About Section
 
@@ -73,28 +69,27 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 
 - Beneath, there lies 3 bootstrap styled cards alligned horizontally. These 3 cards also give the viewer more specific information about the prices, ingredients and the upcoming location. Each card has a button which will either redirect you to the menu page, or to the contact page, where a logged in user can fill out a form to make a request to the business.
 
-![alt text](image-10.png)
+
 
 ### Booking Page
 
 - The booking page is simply designed. It has text at the top of the page welcoming the user to the page and beneath there is a button that brings you to fill out the booking form once clicked. At the bottom, above the footer, lies a record of all bookings made by the logged in user.
 
-![alt text](image-12.png)
+
 
 - Once the button is clicked, the user can then fill out a form with several fields to confirm the time, date and number of people who will make use of the booking at the restaraunt. 
 
-![alt text](image-13.png)
+
 
 - You can see here that once the form is filled out the user is redirected to the booking page with the recorded booking at the bottom. The user is also notified once their booking is created. The alert lies just beneath the navbar.
-![alt text](image-16.png)
 
-![alt text](image-14.png)
+
 
 ### Contact Page
 
- - If a user is logged in, they have access to use the contact page. On this page the user can fill out a form with four fields. Title, name, email and lastly, the content. A user can fill the content field with any geneal queries or request they have. Once the form is submitted, an alert will appear just beneath the navbar to notify the user that their request has been submitted.
+- If a user is logged in, they have access to use the contact page. On this page the user can fill out a form with four fields. Title, name, email and lastly, the content. A user can fill the content field with any geneal queries or request they have. Once the form is submitted, an alert will appear just beneath the navbar to notify the user that their request has been submitted.
 
-![alt text](image-15.png)
+
 
 
 # 3. Technologies Used 
@@ -118,10 +113,9 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 ## Librares 
 
 ### Google Fonts
-- I used this site to import the 'Chivo Monu' font.
-
+- I used [GoogleFonts](https://fonts.google.com/) to import the 'Chivo Monu' font. 
 ### Fontawesome
-- I used Fontawesome for the icons 
+- I used [Fontawesome](https://fontawesome.com/) for the font styling throughout.
 
 ## Platforms
 
@@ -131,7 +125,7 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 #### User Stories
 - I used User Stories throughout the development process. I mistakenly linked them to the wrong repository and had to go back and recreate them with the correct repository. I had several user stories while producing this site. Once a user story was in production, I moved it from the 'To do' section to the 'In progress' section. Once completed, I moved it to the 'Done' section. Each user story was labelled with 'Must have', 'Should Have' or 'Could Have'
 
-![alt text](image-18.png)
+
 
 - You can see here that there was one user story that I did not complete. This was for the ingredients to be visible to the user, which I did not get to complete as it was labelled with 'Could Have' and I prioritied making notifications to the user whenever data is recorded, updated or deleted.
 
@@ -170,7 +164,26 @@ Goat Burger is a website designed for a gourmet burger restaraunt in the heart o
 - I decided to not use automatic testing in the production of this project. As you can see, there is nothing in the test.py files. This is because I did not feel it was needed and I was able to test all of the functionality without having to use automated tests.
 
 
-# Deployment 
+# 5. Deployment 
 
-- This project was deployed 
+## Local 
+- This project was deployed locally, pushing all changes to Github.
+- A'.gitignore' file was created to exclude all files and directories that should not be tracked.
+- All changes to the enviroment were documented using 'git add .', 'git commit -m "Commit"'.
+- These steps made the production simple and easy to track.
+
+## Heroku 
+- This project was deployed early on in the development stage with Heroku.
+- For deployment, 'DEBUG' was set to 'False'.
+- 'ALLOWED_HOSTS' was updated.
+- A 'Procfile' was created for Heroku deploy.
+- A 'requirements.txt' was added with all of the dependecies listed.
+- Two config vars were added. The 'DATABASE_URL' and a 'SECRET_KEY'.
+- A python buildpack was also added in the settings tab.
+
+# 6. Credits
+
+## I Think Therefore I Blog (Walkthrough Project)
+
+- I found the 'I Think Therefore I Blog' walkthrough project very helpful. This walkthrough project allowed me get familiar with the django framework before starting my own website. I took a lot of inspiration from the file structure and even the commands in order to create apps and projects.
 
