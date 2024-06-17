@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     background-color: #222222;
+    font-family: 'Chivo Mono', sans-serif;
 }
 
 .brand {
@@ -39,7 +42,6 @@ body {
 .image-container {
     position: relative;
 }
-
 
 
 .scale {
@@ -327,5 +329,10 @@ div p {
 }
 
 .bg-black {
+    background-color: #222222;
+}
+
+/* Alert messages */
+.messages-container {
     background-color: #222222;
 }
